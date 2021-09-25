@@ -1,0 +1,236 @@
+{
+    "Creat JWT function": {
+        "prefix": "jwt.creat",
+        "body": [
+            " exports.creatJWT = (_id) => {",
+            " return jwt.sign({ _id: _id }, process.env.JWT_KEY, { expiresIn: \"30 days\" });",
+            "};"
+        ],
+        "description": " to creat jsonwebtoken"
+    },
+    "Verify JWT function": {
+        "prefix": "jwt.verify",
+        "body": [
+            "exports.verifyJWT = (token) => {",
+            " return jwt.verify(token, process.env.JWT_KEY);",
+            "};"
+        ],
+        "description": " to verify jsonwebtoken"
+    },
+    "api json Success Response function": {
+        "prefix": "json.successResponse",
+        "body": [
+            "exports.successResponse = (data, massage, statusCode = 200) => {",
+            " return {",
+            " success: true,",
+            " massage,",
+            "statusCode,",
+            "data,",
+            " };",
+            " };"
+        ],
+        "description": " api json success Response"
+    },
+    "api json Error Response function": {
+        "prefix": "json.errorResponse",
+        "body": [
+            " exports.errorResponse = (massage, statusCode = 500) => {",
+            "  return {",
+            " success: false,",
+            " statusCode,",
+            " error: {",
+            " code: statusCode,",
+            " massage: massage,",
+            " },",
+            " };",
+            " };"
+        ],
+        "description": " api json Error Response"
+    },
+    " Error handler class helper": {
+        "prefix": "error-class",
+        "body": [
+            "class ErrorHandler extends Error {",
+            "constructor(statusCode, message) {",
+            " super();",
+            " this.statusCode = statusCode;",
+            " this.message = message;",
+            " }}",
+            "//  function for returning a formatted error",
+            "const handleError = (err, res) => {",
+            "const { statusCode, message } = err;",
+            "res.status(statusCode).json({",
+            "status: \"error\",",
+            "statusCode,",
+            " message",
+            " });};",
+            "",
+            "",
+            " module.exports = {ErrorHandler,handleError}",
+            "",
+            "",
+            "// Create the Error-handling middleware",
+            " app.use((err, req, res, next) => {",
+            " handleError(err, res);",
+            "});",
+            "",
+            "",
+            "// useing ",
+            " const validateUser = async (req, res, next) => {",
+            " try {",
+            " const { email, password } = req.body",
+            "if (!email || !password) {",
+            " throw new ErrorHandler(404, 'Missing required email and password fields')",
+            "}",
+            " const user = await  db.User.findOne({ where: { email }});",
+            "if (!user) {",
+            " throw new ErrorHandler(404, 'User with the specified email does not exists')",
+            "}",
+            " next()",
+            " } catch (error) {",
+            " next(error)",
+            " }",
+            " }"
+        ],
+        "description": "Error handler class helper with example "
+    },
+    "Node Mailer ": {
+        "prefix": "nodeMailer",
+        "body": [
+            "const nodemailer = require(\"nodemailer\");",
+            "",
+            "const sendEmail = async (email, subject, text) => {",
+            " try {",
+            " const transporter = nodemailer.createTransport({",
+            " host: process.env.HOST,",
+            " service: process.env.SERVICE,",
+            "port: 587,",
+            "secure: true,",
+            "auth: {",
+            "user: process.env.USER,",
+            "pass: process.env.PASS,",
+            "}, });",
+            "",
+            "await transporter.sendMail({",
+            " from: process.env.USER,",
+            " to: email,",
+            "subject: subject,",
+            "text: text });",
+            "",
+            "console.log(\"email sent sucessfully\");",
+            "} catch (error) {",
+            " console.log(error, \"email not sent\"); } };",
+            "",
+            " module.exports = sendEmail;"
+        ],
+        "description": " node mailer for sending email massage "
+    },
+    "session with mongo store ": {
+        "prefix": "session-with-mongo-store",
+        "body": [
+            "const session = require(\"express-session\");",
+            "const MongoDBStore = require(\"connect-mongodb-session\")(session);",
+            "",
+            "app.use(",
+            " session({",
+            "secret: \"secret key\",",
+            "resave: false,",
+            " saveUninitialized: false,",
+            "cookie: {",
+            " maxAge: 1000 * 60 * 60 * 24 * 30, // 1 month",
+            " },",
+            " store: MongoDBStore({",
+            " uri: process.env.MONGO_URI,",
+            "collection: \"session\",",
+            "expires: 1000 * 60 * 60 * 24 * 30, // 1 month",
+            "}), }) );"
+        ],
+        "description": " session with mongoDB store "
+    },
+    "multer multibel image": {
+        "prefix": "multer.mi",
+        "body": [
+            "  // multibel image",
+            " const storage = multer.diskStorage({",
+            " destination: (req, file, cb) => {",
+            "  cb(null, 'uploads/')",
+            "},",
+            "  filename: (req, file, cb) => {",
+            " cb(null, `${Date.now()",
+            " }_${file.originalname",
+            " }`)",
+            " },",
+            " fileFilter: (req, file, cb) => {",
+            "const ext = path.extname(file.originalname)",
+            "if (ext !== '.jpg' || ext !== '.png') {",
+            " return cb(res.status(400).end('only jpg, png are allowed'), false);}",
+            "cb(null, true)",
+            "} })",
+            "",
+            "",
+            "",
+            "const store = multer({ storage: storage});",
+            "",
+            "module.exports = store;"
+        ],
+        "description": " node mailer for sending multibel image "
+    },
+    "multer singel image ": {
+        "prefix": "multer.si",
+        "body": [
+            "// singel image",
+            " const storage = multer.diskStorage({",
+            " destination: (req, file, cb) => {",
+            "  cb(null, 'uploads/')",
+            "},",
+            "  filename: (req, file, cb) => {",
+            " cb(null, `${Date.now()",
+            " }_${file.originalname",
+            " }`)",
+            " },",
+            " fileFilter: (req, file, cb) => {",
+            "const ext = path.extname(file.originalname)",
+            "if (ext !== '.jpg' || ext !== '.png') {",
+            " return cb(res.status(400).end('only jpg, png are allowed'), false);}",
+            "cb(null, true)",
+            "} })",
+            "",
+            "",
+            "",
+            "const upload = multer({ storage: storage }).single(\"file\")",
+            "",
+            "module.exports = store;"
+        ],
+        "description": " node mailer for sending singlr image "
+    },
+    "joi Validation ": {
+        "prefix": "joiV",
+        "body": [
+            " const joi = require(\"joi\");",
+            "",
+            " function registerValidation(data) {",
+            "  const schema = joi.object({",
+            " firstName: joi.string().min(4).required(),",
+            " lastName: joi.string().min(4).required(),",
+            " email: joi.string().email().required(),",
+            " password: joi.string().min(4).required(),",
+            " phone: joi.string().min(6).max(15),",
+            " });",
+            " return schema.validate(data); }",
+            "",
+            "module.exports = { registerValidation}",
+            "",
+            "",
+            "// useing ",
+            "const { error, value } = registerValidation(req.body);"
+        ],
+        "description": " joi Validation "
+    },
+    "express controller ": {
+        "prefix": "e-controller",
+        "body": [
+            "exports.${1:controllerName} = async ${2:(req, res)} => {\n\t${3}\n});"
+        ],
+        "description": " express controller"
+    }
+}

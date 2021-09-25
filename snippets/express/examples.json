@@ -1,0 +1,17 @@
+{
+    "Example - Hello World": {
+        "prefix": "app",
+        "body": [
+            "const express = require(\"express\");",
+            "const app = express();",
+            "const path = require(\"path\");",
+            "// mudellwar",
+            "app.use(express.urlencoded({ extended: false }));",
+            "app.use(express.static(path.join(__dirname, \"public\")));",
+            "",
+            "app.get(\"/\", (req, res) => res.send(\"Hello World!\"));",
+            "app.listen(3000, () => console.log(` app listening on port port! 3000 /n http://localhost:${1:port}`));"
+        ],
+        "description": "Express App"
+    }
+}

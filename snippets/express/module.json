@@ -1,0 +1,12 @@
+{
+    "ExpressJs Namespace": {
+        "prefix": "rExpress",
+        "body": [
+            "const express = require('express');",
+            "const app = express();",
+            "",
+            "$0"
+        ],
+        "description": "Add express module and app to namespace"
+    }
+}

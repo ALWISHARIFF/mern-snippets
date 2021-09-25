@@ -1,0 +1,56 @@
+{
+    "Mongoose Generate User Model": {
+        "prefix": "moSchema",
+        "body": [
+            "${1:const mongoose = require('mongoose'); // Erase if already required}",
+            "",
+            "// Declare the Schema of the Mongo model",
+            "var userSchema = new mongoose.Schema({",
+            "    name:{",
+            "        type:String,",
+            "        required:true,",
+            "        ${2:unique:true,}",
+            "        index:true,",
+            "    },",
+            "    email:{",
+            "        type:String,",
+            "        ${3:required:true,}",
+            "        unique:true,",
+            "    },",
+            "    mobile:{",
+            "        type:${4:String},",
+            "        ${5:required:true,}",
+            "        unique:true,",
+            "    },",
+            "    password:{",
+            "        type:String,",
+            "        required:true,",
+            "    },",
+            "});",
+            "$0",
+            "//Export the model",
+            "module.exports = mongoose.model('${6:User}', userSchema);"
+        ],
+        "description": "Generates typical User model with 4 fields"
+    },
+    "mongoose connect": {
+        "prefix": "moConnect",
+        "body": [
+            "const mongoose = require(\"mongoose\");",
+            "",
+            "",
+            "const connectDB = async () => {",
+            " try {",
+            " const connect = await mongoose.connect(process.env.MONGO_URI, {",
+            "useNewUrlParser: true,",
+            " });",
+            "console.log(\"monogDB connected successfully\");",
+            "} catch (error) {",
+            " console.log(error);",
+            "}",
+            "};",
+            "module.exports = connectDB;"
+        ],
+        "description": "connect to MongoDB"
+    }
+}

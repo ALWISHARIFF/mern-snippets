@@ -1,0 +1,92 @@
+{
+    "name": "mern-snippets",
+    "displayName": "MERN Snippets",
+    "description": "",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascriptreact",
+                "path": "./snippets/react/react.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/express/function.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/express/application.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/express/examples.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/express/handlers.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/express/middleware.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/express/module.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/express/request.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/express/response.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/express/router.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/ejs/ejs.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "handlebars",
+                "path": "./hbs/hbs.json"
+            },
+            {
+                "language": "hbs",
+                "path": "./hbs/hbs.json"
+            },
+            {
+                "language": "handlebars",
+                "path": "./hbs/hbs.json"
+            },
+            {
+                "language": "hbs",
+                "path": "./hbs/hbs.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./mongo/mongoose.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./mongo/mongo.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./mongo/mongo.json"
+            }
+        ]
+    }
+}

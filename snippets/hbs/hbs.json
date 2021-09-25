@@ -1,0 +1,65 @@
+{
+    "if helper": {
+        "prefix": "hif",
+        "body": [
+            "{{#if ${1:cond}}}",
+            "${0}",
+            "{{/if}}"
+        ],
+        "description": "If block helper"
+    },
+    "if else helper": {
+        "prefix": "hifelse",
+        "body": [
+            "{{#if ${1:cond}}}",
+            "${0}",
+            "{{else}}",
+            "${0}",
+            "{{/if}}"
+        ],
+        "description": "if else block helper"
+    },
+    "unless helper": {
+        "prefix": "hunless",
+        "body": [
+            "{{#unless ${1:cond}}}",
+            "${0}",
+            "{{/unless}}"
+        ],
+        "description": "unless block helper"
+    },
+    "each helper": {
+        "prefix": "heach",
+        "body": [
+            "{{#each ${1:list}}}",
+            "${0}",
+            "{{/each}}"
+        ],
+        "description": "each block helper"
+    },
+    "each else helper": {
+        "prefix": "heachelse",
+        "body": [
+            "{{#each ${1:list}}}",
+            "${0}",
+            "{{else}}",
+            "$0",
+            "{{/each}}"
+        ],
+        "description": "each else block helper"
+    },
+    "with helper": {
+        "prefix": "hwith",
+        "body": [
+            "{{#with ${property}}}",
+            "${0}",
+            "{{/with}}"
+        ],
+        "description": "each block helper"
+    },
+    "partials ": {
+        "prefix": "hpar",
+        "body": "{{> partial_name}}}",
+        "description": "partials in hbs"
+    }
+}
