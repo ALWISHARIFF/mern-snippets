@@ -1,8 +1,5 @@
 # Express Snippets
 
-                                                                                                   |
-
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | app.all | This method is like the standard app.METHOD() methods, except it matches all HTTP verbs. |
 | app.disable | Sets the Boolean setting name to false, where name is one of the properties from the app settings table. |
 | app.disabled | Returns true if the Boolean setting name is disabled (false), where name is one of the properties from the app settings table. |
@@ -258,7 +255,7 @@
 ## hbs Snippets
 
 |      Prefix | Method                   |
-| ----------: | ------------------------ | --- |
+| ----------: | ------------------------ |
 |      `hbs→` | `simple hbs syntax`      |
 |      `hif→` | `if condition`           |
 |    `helif→` | `if else condition`      |
@@ -268,6 +265,4 @@
 | `hcusfunc→` | `Custom Helper function` |
 |     `hlog→` | `Hbs logger helper`      |
 |  `hlookup→` | `Hbs lookup helper`      |
-|      `hwi→` | `with condition`         |     |
-
----
+|      `hwi→` | `with condition`         |
