@@ -32,6 +32,7 @@
 | `multer.mi`                | `node mailer for sending email massage "`  |
 | `multer.si`                | `node mailer for sending singlr image `    |
 | `joiV`                     | `joi Validation`                           |
+| `auth-mid`                 | `To confirm whether it is login or not`    |
 | `e-controller`             | `express controller`                       |
 
 //////////////////////////////////
@@ -234,7 +235,25 @@
 |            1.            | **!mdbmethod** |       MongoDB Methods       |   _schema.methods.function_    |
 |            2.            | **!mdbstatic** |       MongoDB Statics       |   _schema.statics.function_    |
 
-///////////////////////
+# jest snipets
+
+- `jest-suite`, adds a test suite
+- `jest-test`, adds a test
+- `jest-test-expect`, adds a test with an expect
+- `jest-expect`, adds an expect, using `toBe()`
+- `jest-expect-to-equal`, adds expect, using `toEqual()`
+- `jest-test-expect-to-equal`, adds a test with an expect, using `toEqual()`
+- `jest-expect-to-throw`, adds an expect, using `toThrow()`
+- `jest-test-expect-to-throw`, adds a test with an expect, using `toThrow()`,
+- `jest-test-beforeAll`, adds a `beforeAll()`, this method runs before all tests
+- `jest-test-afterAll`, adds a `afterAll()`, this method runs after all tests
+- `supertest-init`, adds the initial imports for supertest and the app you are about to test. I assume the app you are about to test looks something like this:
+
+- `supertest-beforeall`, configures supertest to use the app instance, this is a needed step to initialize supertest
+- `supertest-aftereall`, ensures the web app closes down after the test run, this is a needed step.
+- `supertest-testget`, an example of supertest testing a GET route
+- `supertest-testgetwithparam`, an example of supertest testing a GET route with a route parameter
+- `supertest-testpost`, an example of supertest testing a POST route with a payload
 
 # EJS Snippets
 

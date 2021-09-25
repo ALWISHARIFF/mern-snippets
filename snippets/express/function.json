@@ -3,7 +3,7 @@
         "prefix": "jwt.creat",
         "body": [
             " exports.creatJWT = (_id) => {",
-            " return jwt.sign({ _id: _id }, process.env.JWT_KEY, { expiresIn: \"30 days\" });",
+            "                  return jwt.sign({ _id: _id }, process.env.JWT_KEY, { expiresIn: \"30 days\" });",
             "};"
         ],
         "description": " to creat jsonwebtoken"
@@ -12,7 +12,7 @@
         "prefix": "jwt.verify",
         "body": [
             "exports.verifyJWT = (token) => {",
-            " return jwt.verify(token, process.env.JWT_KEY);",
+            "             return jwt.verify(token, process.env.JWT_KEY);",
             "};"
         ],
         "description": " to verify jsonwebtoken"
@@ -22,11 +22,11 @@
         "body": [
             "exports.successResponse = (data, massage, statusCode = 200) => {",
             " return {",
-            " success: true,",
-            " massage,",
-            "statusCode,",
-            "data,",
-            " };",
+            "           success: true,",
+            "           massage,",
+            "           statusCode,",
+            "           data,",
+            "            };",
             " };"
         ],
         "description": " api json success Response"
@@ -35,14 +35,14 @@
         "prefix": "json.errorResponse",
         "body": [
             " exports.errorResponse = (massage, statusCode = 500) => {",
-            "  return {",
-            " success: false,",
-            " statusCode,",
-            " error: {",
-            " code: statusCode,",
-            " massage: massage,",
-            " },",
-            " };",
+            "         return {",
+            "                    success: false,",
+            "                    statusCode,",
+            "                    error: {",
+            "                    code: statusCode,",
+            "                    massage: massage,",
+            "                    },",
+            "                   };",
             " };"
         ],
         "description": " api json Error Response"
@@ -232,5 +232,23 @@
             "exports.${1:controllerName} = async ${2:(req, res)} => {\n\t${3}\n}"
         ],
         "description": " express controller"
+    },
+    "auth middleware": {
+        "prefix": "auth-mid",
+        "body": [
+            "const isAuth = (req, res, next) => {",
+            "    try {",
+            "      const token = req.header(\"auth-token\");",
+            "      if (!token && !req.admin)",
+            "        return res.status(401).json(errorResponse(\"user not authenticated\", 401));",
+            "      const verifiedUser = verifyJWT(token);",
+            "      req.user = verifiedUser;",
+            "      next();",
+            "    } catch (err) {",
+            "      return res.status(401).json(errorResponse(\"user not authenticated\", 401));",
+            "    }",
+            "  };"
+        ],
+        "description": " To confirm whether it is login or not "
     }
 }
