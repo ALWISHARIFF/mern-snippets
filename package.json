@@ -23,6 +23,10 @@
             },
             {
                 "language": "javascript",
+                "path": "./snippets/react/react.json"
+            },
+            {
+                "language": "javascript",
                 "path": "./snippets/express/function.json"
             },
             {
@@ -63,7 +67,7 @@
             },
             {
                 "language": "html",
-                "path": "./snippets/snippets.json"
+                "path": "./ejs/ejs.json"
             },
             {
                 "language": "handlebars",

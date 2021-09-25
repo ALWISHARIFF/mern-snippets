@@ -229,7 +229,7 @@
     "express controller ": {
         "prefix": "e-controller",
         "body": [
-            "exports.${1:controllerName} = async ${2:(req, res)} => {\n\t${3}\n});"
+            "exports.${1:controllerName} = async ${2:(req, res)} => {\n\t${3}\n}"
         ],
         "description": " express controller"
     }
