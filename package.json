@@ -151,35 +151,35 @@
             },
             {
                 "language": "html",
-                "path": "./ejs/ejs.json"
+                "path": "./snippets/ejs/ejs.json"
             },
             {
                 "language": "handlebars",
-                "path": "./hbs/hbs.json"
+                "path": "./snippets/hbs/hbs.json"
             },
             {
                 "language": "hbs",
-                "path": "./hbs/hbs.json"
+                "path": ".snippets/hbs/hbs.json"
             },
             {
                 "language": "handlebars",
-                "path": "./hbs/hbs.json"
+                "path": "./snippets/hbs/hbs.json"
             },
             {
                 "language": "hbs",
-                "path": "./hbs/hbs.json"
+                "path": "./snippets/hbs/hbs.json"
             },
             {
                 "language": "javascript",
-                "path": "./mongo/mongoose.json"
+                "path": "./snippets/mongo/mongoose.json"
             },
             {
                 "language": "javascript",
-                "path": "./mongo/mongo.json"
+                "path": "./snippets/mongo/mongo.json"
             },
             {
                 "language": "typescript",
-                "path": "./mongo/mongo.json"
+                "path": "./snippets/mongo/mongo.json"
             }
         ]
     },
