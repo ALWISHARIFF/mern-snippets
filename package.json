@@ -94,6 +94,14 @@
                     "default": "connect|withRouter",
                     "description": "This allows the importer to find your components name bypass the higher order components that you wrap it in. Each higher order component must be deliminated by pipe |. example: connect|withRouter"
                 }
+            },
+            "configurationDefaults": {
+                "files.associations": {
+                    "*.ejs": "html"
+                },
+                "emmet.includeLanguages": {
+                    "ejs": "html"
+                }
             }
         },
         "snippets": [
@@ -182,15 +190,7 @@
                     "meta.embedded.block.javascript": "source.js"
                 }
             }
-        ],
-        "configurationDefaults": {
-            "files.associations": {
-                "*.ejs": "html"
-            },
-            "emmet.includeLanguages": {
-                "ejs": "html"
-            }
-        }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
