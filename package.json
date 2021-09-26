@@ -165,7 +165,28 @@
                 "language": "hbs",
                 "path": ".snippets/hbs/hbs.json"
             }
-        ]
+        ],
+        "grammars": [
+            {
+                "scopeName": "text.html.ejs",
+                "path": "./syntaxes/ejs.json",
+                "injectTo": [
+                    "text.html"
+                ],
+                "embeddedLanguages": {
+                    "meta.embedded.block.ejs": "ejs",
+                    "meta.embedded.block.javascript": "source.js"
+                }
+            }
+        ],
+        "configurationDefaults": {
+            "files.associations": {
+                "*.ejs": "html"
+            },
+            "emmet.includeLanguages": {
+                "ejs": "html"
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
