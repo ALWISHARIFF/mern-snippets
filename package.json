@@ -99,10 +99,6 @@
             },
             {
                 "language": "javascript",
-                "path": "jsconfig.json"
-            },
-            {
-                "language": "javascript",
                 "path": "./snippets/react/react.json"
             },
             {
@@ -146,11 +142,19 @@
                 "path": "./snippets/express/router.json"
             },
             {
+                "language": "javascript",
+                "path": "./snippets/mongo/mongoose.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/mongo/mongo.json"
+            },
+            {
                 "language": "html",
                 "path": "./snippets/ejs/ejs.json"
             },
             {
-                "language": "html",
+                "language": "ejs",
                 "path": "./snippets/ejs/ejs.json"
             },
             {
@@ -160,26 +164,6 @@
             {
                 "language": "hbs",
                 "path": ".snippets/hbs/hbs.json"
-            },
-            {
-                "language": "handlebars",
-                "path": "./snippets/hbs/hbs.json"
-            },
-            {
-                "language": "hbs",
-                "path": "./snippets/hbs/hbs.json"
-            },
-            {
-                "language": "javascript",
-                "path": "./snippets/mongo/mongoose.json"
-            },
-            {
-                "language": "javascript",
-                "path": "./snippets/mongo/mongo.json"
-            },
-            {
-                "language": "typescript",
-                "path": "./snippets/mongo/mongo.json"
             }
         ]
     },
