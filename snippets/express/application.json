@@ -72,7 +72,7 @@
     "App Use": {
         "prefix": "app.use",
         "body": [
-            "app.use('${1}')"
+            "app.use(${1})"
         ],
         "description": "Mounts the specified middleware function or functions at the specified path. If path is not specified, it defaults to “/”."
     },
@@ -84,7 +84,7 @@
         "description": "Registers the given template engine callback as ext."
     },
     "ejx engine": {
-        "prefix": "ejx.engine",
+        "prefix": "ejs.engine",
         "body": [
             "app.set(\"view engine\", \"ejs\");",
             "app.set(\"views\", path.join(__dirname, \"views\"));"
@@ -92,7 +92,7 @@
         "description": " ejx engen."
     },
     "hbs engine": {
-        "prefix": "ejx.engine",
+        "prefix": "hbs.engine",
         "body": [
             "app.set(\"view engine\", \"hbs\"); ",
             "app.engine('.hbs',{",
@@ -100,6 +100,6 @@
             " extname: '.hbs',",
             "  })"
         ],
-        "description": " ejx engen."
+        "description": " hbs engen."
     }
 }
