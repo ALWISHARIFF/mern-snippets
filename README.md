@@ -1,3 +1,22 @@
+**_If some snippets do not show up, add the following to your settings file_**
+
+```json
+    "configurationDefaults": {
+        "files.associations": {
+            "*.ejs": "html"
+        },
+        "emmet.includeLanguages": {
+            "ejs": "html"
+        }
+    }
+```
+
+or you can dowinlode mern-snippets-0.0.1.vsix frome :
+https://github.com/moh2medkhaled/mern-snippets/blob/master/mern-snippets-0.0.1.vsix
+
+This problem occurs because vs code deletes this command frome package.json.
+This problem may appear when using EJS - HBS - MongoDB snippets
+
 # Express Snippets
 
 | Prefix         | Method                                                                                                                                                                                |
