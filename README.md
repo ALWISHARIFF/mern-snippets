@@ -48,13 +48,24 @@ This problem may appear when using EJS - HBS - MongoDB snippets
 | `error-class`              | `Error handler class helper with example ` |
 | `nodeMailer`               | `node mailer for sending email massage`    |
 | `session-with-mongo-store` | `session with mongoDB store `              |
-| `multer.mi`                | `node mailer for sending email massage "`  |
+| `multer.mi`                | `node mailer for sending multiple image `  |
 | `multer.si`                | `node mailer for sending singlr image `    |
 | `joiV`                     | `joi Validation`                           |
 | `auth-mid`                 | `To confirm whether it is login or not`    |
 | `e-controller`             | `express controller`                       |
 
-//////////////////////////////////
+### JavaScript Snippets
+
+| Prefix       | Method               |
+| ------------ | -------------------- |
+| `af`         | `Arrow Function`     |
+| `.filter`    | `Filter Function`    |
+| `.find`      | `Find Function`      |
+| `.findIndex` | `findIndex Function` |
+| `.indexOf`   | `indexOf Function`   |
+| `.map`       | `map Function`       |
+| `.sort`      | `sort Function`      |
+| `.rqr`       | `Require a package`  |
 
 ### react Snippets
 

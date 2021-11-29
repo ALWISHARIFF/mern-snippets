@@ -2,7 +2,7 @@
     "name": "mern-snippets",
     "displayName": "MERN Snippets",
     "description": "MongoDB, ExpressJS, ReactJS & NodeJS Snippets 🚀 MERN Snippets include Redux, EJS, HBS ,Auto Import",
-    "version": "0.0.1",
+    "version": "0.1.1",
     "publisher": "Mohamed-khaled",
     "author": {
         "name": "Mohamed Khaled",
@@ -112,6 +112,10 @@
             },
             {
                 "language": "javascript",
+                "path": "./snippets/js/js.json"
+            },
+            {
+                "language": "javascriptreact",
                 "path": "./snippets/js/js.json"
             },
             {

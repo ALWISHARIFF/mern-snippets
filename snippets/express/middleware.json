@@ -33,5 +33,31 @@
         "prefix": "app.static-file",
         "body": "app.use(express.static(__dirname + '/public'));$0",
         "description": "Static file middleware"
+    },
+    "Middleware for uncaught exceptions": {
+        "prefix": "uncaughtException",
+        "body": [
+            "process.on('uncaughtException', (err) => {",
+            "    console.log('UNCAUGHT EXCEPTION! Shutting down...');",
+            "    console.log(err.name, err.message);",
+            "    process.exit(1); //1 stands for uncaught exception",
+            "  });"
+        ],
+        "description": "for uncaught exceptions like x is not defined; used for synchronous code in NodeJS"
+    },
+    "Middleware forunhandled promises in NodeJS": {
+        "prefix": "unhandledRejection",
+        "body": [
+            " //process is an instance of EventEmitter and will handle all unhandled promises in NodeJS",
+            " //this is used for asynchronous code; Promises",
+            "process.on('unhandledRejection', (err) => {",
+            "    console.log(err.name, err.message);",
+            "    console.log('UNHANDLED REJECTION! Shutting down...');",
+            "    server.close(() => {",
+            "      process.exit(1); //1 stands for uncaught exception",
+            "               });",
+            "  });"
+        ],
+        "description": "//process is an instance of EventEmitter and will handle all unhandled promises in NodeJS this is used for asynchronous code; Promises"
     }
 }

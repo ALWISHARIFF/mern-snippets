@@ -5,6 +5,42 @@
             "() => { return ${1} ; }"
         ]
     },
+    "filter Function": {
+        "prefix": ".filter",
+        "body": [
+            ".filter(item => item${1})"
+        ]
+    },
+    "find Function": {
+        "prefix": ".find",
+        "body": [
+            ".find(item => item${1})"
+        ]
+    },
+    "findIndex Function": {
+        "prefix": ".findIndex",
+        "body": [
+            ".findIndex(item => item${1})"
+        ]
+    },
+    "indexOf Function": {
+        "prefix": ".indexOf",
+        "body": [
+            ".indexOf(${1});"
+        ]
+    },
+    "map Function": {
+        "prefix": ".map",
+        "body": [
+            ".map(item => item${1})"
+        ]
+    },
+    "sort Function": {
+        "prefix": ".sort",
+        "body": [
+            ".sort((${1:item1},${2:item2}) => ${1:item1} > ${2:item2})"
+        ]
+    },
     "import": {
         "prefix": "imp",
         "body": "import ${2:moduleName} from '${1:module}';$0",

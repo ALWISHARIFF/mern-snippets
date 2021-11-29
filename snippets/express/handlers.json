@@ -9,7 +9,7 @@
         "description": "Create 404 Not Found Handler"
     },
     "500 Error": {
-        "prefix": "e4-500-handler",
+        "prefix": "app.500",
         "body": [
             "app.use((err, req, res, next) => {",
             "\tres.status(500).send('${1:500 - Something was error!}');",
