@@ -343,7 +343,7 @@
         ]
     },
     "import React, {useRef}": {
-        "prefix": "imrr",
+        "prefix": "imur",
         "body": [
             "import React, { useRef } from 'react'",
             ""
@@ -389,6 +389,36 @@
         "body": [
             "import { Route, Switch, NavLink, Link } from 'react-router-dom'",
             ""
+        ]
+    },
+    "import React Browser Router - Route - Routes": {
+        "prefix": "imbrr-v6",
+        "body": [
+            "import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'",
+            ""
+        ]
+    },
+    "Route - react router dom": {
+        "prefix": "Route",
+        "body": [
+            "<Route path=\"/\" element={<${1:name} />} />"
+        ]
+    },
+    "Link - react router dom": {
+        "prefix": "Link",
+        "body": [
+            " <Link to=\"/\">${1:name}</Link>"
+        ]
+    },
+    "react router dom": {
+        "prefix": "rrd-v6",
+        "body": [
+            "<BrowserRouter>",
+            "    <Routes>",
+            "        <Route path=\"/\" element={<Home />} />",
+            "        <Route path=\"*\" element={<NotFound />} />",
+            "    </Routes>",
+            " </BrowserRouter>"
         ]
     },
     "import React Browser Router - Switch": {

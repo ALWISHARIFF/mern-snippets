@@ -112,6 +112,10 @@
             },
             {
                 "language": "javascript",
+                "path": "./snippets/js/js.json"
+            },
+            {
+                "language": "javascript",
                 "path": "./snippets/express/jest.json"
             },
             {
